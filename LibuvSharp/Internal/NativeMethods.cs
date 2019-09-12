@@ -5,7 +5,7 @@ namespace LibuvSharp
 {
 	internal static class NativeMethods
 	{
-		public const string libuv = "uv";
+		public const string libuv = "libuv";
 
 		[DllImport(libuv, CallingConvention = CallingConvention.Cdecl)]
 		public static extern int uv_listen(IntPtr stream, int backlog, Handle.callback callback);

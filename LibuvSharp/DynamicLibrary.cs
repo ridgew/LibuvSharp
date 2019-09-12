@@ -40,22 +40,22 @@ namespace LibuvSharp
 
 	class LibuvDynamicLibrary : DynamicLibrary
 	{
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal extern static int uv_dlopen(IntPtr name, IntPtr handle);
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal extern static int uv_dlopen(string name, IntPtr handle);
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal extern static void uv_dlclose(IntPtr handle);
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal extern static int uv_dlsym(IntPtr handle, string name, out IntPtr ptr);
 
-		[DllImport("uv")]
+		[DllImport(NativeMethods.libuv)]
 		internal extern static IntPtr uv_dlerror(IntPtr handle);
 
-		[DllImport("uv")]
+		[DllImport(NativeMethods.libuv)]
 		internal extern static IntPtr uv_dlerror_free(IntPtr handle);
 
 		IntPtr handle = IntPtr.Zero;

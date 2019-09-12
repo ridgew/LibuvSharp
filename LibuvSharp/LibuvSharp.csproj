@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{281B560A-E3B1-437C-9274-DD655E860E6E}</ProjectGuid>
+    <ProjectGuid>{DC71928E-5A67-444D-90E6-81510F2E6F66}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>LibuvSharp</RootNamespace>
     <AssemblyName>LibuvSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

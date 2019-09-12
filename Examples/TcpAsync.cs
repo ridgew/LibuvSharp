@@ -1,13 +1,11 @@
 using System;
-using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using LibuvSharp;
 using LibuvSharp.Threading.Tasks;
 
 namespace Test
 {
-	class MainClass
+    class MainClass
 	{
 		public static async Task Server()
 		{

@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{36D61D0A-7F93-4E90-8F17-7BB7B7FB9FFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpAsync", "Examples\TcpAsync.csproj", "{1E075747-F4DF-4761-A080-A930D9EB7492}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibuvSharp", "LibuvSharp\LibuvSharp.csproj", "{DC71928E-5A67-444D-90E6-81510F2E6F66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossAsync", "Examples\CrossAsync.csproj", "{2466EB98-DE8A-4D23-A89F-B3C9DC57D403}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessAsync", "Examples\ProcessAsync.csproj", "{C1B45EB2-6680-4108-9088-06337E359BA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UVTimerAsync", "Examples\UVTimerAsync.csproj", "{E33F8D91-A4C7-4BA0-9153-DA2FDA6EAB4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E075747-F4DF-4761-A080-A930D9EB7492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E075747-F4DF-4761-A080-A930D9EB7492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E075747-F4DF-4761-A080-A930D9EB7492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E075747-F4DF-4761-A080-A930D9EB7492}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC71928E-5A67-444D-90E6-81510F2E6F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC71928E-5A67-444D-90E6-81510F2E6F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC71928E-5A67-444D-90E6-81510F2E6F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC71928E-5A67-444D-90E6-81510F2E6F66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2466EB98-DE8A-4D23-A89F-B3C9DC57D403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2466EB98-DE8A-4D23-A89F-B3C9DC57D403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2466EB98-DE8A-4D23-A89F-B3C9DC57D403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2466EB98-DE8A-4D23-A89F-B3C9DC57D403}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1B45EB2-6680-4108-9088-06337E359BA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1B45EB2-6680-4108-9088-06337E359BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1B45EB2-6680-4108-9088-06337E359BA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1B45EB2-6680-4108-9088-06337E359BA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E33F8D91-A4C7-4BA0-9153-DA2FDA6EAB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E33F8D91-A4C7-4BA0-9153-DA2FDA6EAB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E33F8D91-A4C7-4BA0-9153-DA2FDA6EAB4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E33F8D91-A4C7-4BA0-9153-DA2FDA6EAB4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1E075747-F4DF-4761-A080-A930D9EB7492} = {36D61D0A-7F93-4E90-8F17-7BB7B7FB9FFD}
+		{2466EB98-DE8A-4D23-A89F-B3C9DC57D403} = {36D61D0A-7F93-4E90-8F17-7BB7B7FB9FFD}
+		{C1B45EB2-6680-4108-9088-06337E359BA4} = {36D61D0A-7F93-4E90-8F17-7BB7B7FB9FFD}
+		{E33F8D91-A4C7-4BA0-9153-DA2FDA6EAB4A} = {36D61D0A-7F93-4E90-8F17-7BB7B7FB9FFD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08C886E2-DD18-41AA-8111-8F63524E9CB1}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = LibuvSharp\LibuvSharp.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.FileWidth = 120
+		$1.TabWidth = 4
+		$1.inheritsSet = Mono
+		$1.inheritsScope = text/plain
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+	EndGlobalSection
+EndGlobal

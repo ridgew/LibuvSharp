@@ -99,7 +99,7 @@ namespace LibuvSharp
 
 		public event Action Closed;
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		static extern void uv_close(IntPtr handle, close_callback cb);
 
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
@@ -169,7 +169,7 @@ namespace LibuvSharp
 			Close();
 		}
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_is_active(IntPtr handle);
 
 		public bool IsActive {
@@ -181,7 +181,7 @@ namespace LibuvSharp
 			}
 		}
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_is_closing(IntPtr handle);
 
 		public bool IsClosing {
@@ -204,13 +204,13 @@ namespace LibuvSharp
 			}
 		}
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		static extern void uv_ref(IntPtr handle);
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		static extern void uv_unref(IntPtr handle);
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		static extern int uv_has_ref(IntPtr handle);
 
 		public void Ref()
@@ -238,7 +238,7 @@ namespace LibuvSharp
 			}
 		}
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_handle_size(HandleType type);
 
 		public static int Size(HandleType type)
@@ -246,7 +246,7 @@ namespace LibuvSharp
 			return uv_handle_size(type);
 		}
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		static extern HandleType uv_guess_handle(int fd);
 
 		public static HandleType Guess(int fd)

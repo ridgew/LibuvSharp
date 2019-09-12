@@ -10,19 +10,19 @@ namespace LibuvSharp
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		internal delegate void read_callback(IntPtr stream, IntPtr size, uv_buf_t buf);
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_read_start(IntPtr stream, alloc_callback alloc_callback, read_callback rcallback);
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_read_watcher_start(IntPtr stream, Action<IntPtr> read_watcher_callback);
 
-		[DllImport ("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport (NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_read_stop(IntPtr stream);
 
-		[DllImport("uv", EntryPoint = "uv_write", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, EntryPoint = "uv_write", CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_write(IntPtr req, IntPtr handle, uv_buf_t[] bufs, int bufcnt, callback callback);
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_shutdown(IntPtr req, IntPtr handle, callback callback);
 
 		uv_stream_t *stream;
@@ -234,7 +234,7 @@ namespace LibuvSharp
 			uv_shutdown(cbr.Handle, NativeHandle, CallbackPermaRequest.CallbackDelegate);
 		}
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_is_readable(IntPtr handle);
 
 		internal bool readable;
@@ -249,7 +249,7 @@ namespace LibuvSharp
 			}
 		}
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_is_writable(IntPtr handle);
 
 		internal bool writeable;
@@ -265,7 +265,7 @@ namespace LibuvSharp
 		}
 
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal extern static int uv_try_write(IntPtr handle, uv_buf_t[] bufs, int nbufs);
 
 		unsafe public int TryWrite(ArraySegment<byte> data)

@@ -38,10 +38,10 @@ namespace LibuvSharp
 		}
 
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		private static extern sbyte *uv_strerror(int systemErrorCode);
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		private static extern sbyte *uv_err_name(int systemErrorCode);
 
 		internal static string StringError(int systemErrorCode)

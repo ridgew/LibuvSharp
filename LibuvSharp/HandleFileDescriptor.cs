@@ -5,10 +5,10 @@ namespace LibuvSharp
 {
 	public partial class HandleBase : IFileDescriptor
 	{
-		[DllImport("uv", EntryPoint = "uv_fileno", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, EntryPoint = "uv_fileno", CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_fileno_windows(IntPtr handle, out IntPtr fd);
 
-		[DllImport("uv", EntryPoint = "uv_fileno", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, EntryPoint = "uv_fileno", CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_fileno_unix(IntPtr handle, out int fd);
 
 		public IntPtr FileDescriptor {
@@ -25,19 +25,19 @@ namespace LibuvSharp
 			}
 		}
 
-		[DllImport("uv", EntryPoint = "uv_tcp_open", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, EntryPoint = "uv_tcp_open", CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_tcp_open_unix(IntPtr handle, int sock);
 
-		[DllImport("uv", EntryPoint = "uv_tcp_open", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, EntryPoint = "uv_tcp_open", CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_tcp_open_windows(IntPtr handle, IntPtr sock);
 
-		[DllImport("uv", EntryPoint = "uv_udp_open", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, EntryPoint = "uv_udp_open", CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_udp_open_unix(IntPtr handle, int sock);
 
-		[DllImport("uv", EntryPoint = "uv_udp_open", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, EntryPoint = "uv_udp_open", CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_udp_open_windows(IntPtr handle, IntPtr sock);
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		static extern int uv_pipe_open(IntPtr handle, int fd);
 
 		public int Open(Func<IntPtr, int, int> unix, Func<IntPtr, IntPtr, int> windows, IntPtr handle, IntPtr fileDescriptor)

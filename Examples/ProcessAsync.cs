@@ -17,7 +17,7 @@ namespace Test
 			 * If they execute, this example should work as well
 			 */
 			Loop.Default.Run(async () => {
-				string file = Path.Combine(Directory.GetCurrentDirectory(), "Test.exe");
+				string file = Path.Combine(Directory.GetCurrentDirectory(), "TcpAsync.exe");
 				using (var stdout = new Pipe() { Writeable = true })
 				using (var process = Process.Spawn(new ProcessOptions() {
 					File = file,

@@ -88,7 +88,7 @@ namespace LibuvSharp
 			}
 		}
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		static extern void uv_pipe_connect(IntPtr req, IntPtr handle, string name, callback connect_cb);
 
 		public void Connect(string name, Action<Exception> callback)
@@ -106,7 +106,7 @@ namespace LibuvSharp
 			uv_pipe_connect(cpr.Handle, pipe.NativeHandle, name, ConnectRequest.CallbackDelegate);
 		}
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		static extern int uv_pipe_getpeername(IntPtr handle, IntPtr buf, ref IntPtr len);
 
 		public string RemoteAddress {
@@ -130,7 +130,7 @@ namespace LibuvSharp
 		{
 		}
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		static extern int uv_write2(IntPtr req, IntPtr handle, uv_buf_t[] bufs, int bufcnt, IntPtr sendHandle, callback callback);
 
 		public void Write(Handle handle, ArraySegment<byte> segment, Action<Exception> callback)

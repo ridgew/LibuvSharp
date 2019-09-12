@@ -31,10 +31,10 @@ namespace LibuvSharp
 		internal static bool isUnix = (System.Environment.OSVersion.Platform == PlatformID.Unix) || (System.Environment.OSVersion.Platform == PlatformID.MacOSX);
 		internal static bool IsUnix { get { return isUnix; } }
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal extern static int uv_ip4_addr(string ip, int port, out sockaddr_in address);
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal extern static int uv_ip6_addr(string ip, int port, out sockaddr_in6 address);
 
 		internal static sockaddr_in ToStruct(string ip, int port)
@@ -68,10 +68,10 @@ namespace LibuvSharp
 			}
 		}
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal extern static int uv_ip4_name(IntPtr src, byte[] dst, IntPtr size);
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal extern static int uv_ip6_name(IntPtr src, byte[] dst, IntPtr size);
 
 
@@ -129,7 +129,7 @@ namespace LibuvSharp
 			return i;
 		}
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int uv_req_size(RequestType type);
 
 		internal static int Sizeof(RequestType type)
@@ -195,7 +195,7 @@ namespace LibuvSharp
 		}
 #endif
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		internal extern static uint uv_version();
 
 		public static void GetVersion(out int major, out int minor, out int patch)
@@ -214,7 +214,7 @@ namespace LibuvSharp
 			}
 		}
 
-		[DllImport("uv", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(NativeMethods.libuv, CallingConvention = CallingConvention.Cdecl)]
 		unsafe internal extern static sbyte *uv_version_string();
 
 		unsafe public static string VersionString {
